@@ -55,6 +55,7 @@ public class SecurityConfig {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/auth/**").permitAll()
+                .antMatchers("/jwt/**").permitAll()
                 .anyRequest().authenticated() // 나머지 api는 전부 인증 필요
 
 
