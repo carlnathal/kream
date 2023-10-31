@@ -35,6 +35,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     // 디비에 user 값이 존재한다면 UserDetails 객체로 만들어서 리턴
     private UserDetails createUserDetails(User user){
+        System.out.println("왜 안 되" + user.getAuthority());
         System.out.println("크리에이트유저디테일 실행"+user.getAuthority().toString());
         GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(user.getAuthority().toString());
         System.out.println("크리에이트유저디테일 실행");

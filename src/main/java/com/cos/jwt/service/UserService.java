@@ -3,6 +3,7 @@ package com.cos.jwt.service;
 
 import com.cos.jwt.dto.UserDto;
 import com.cos.jwt.dto.UserResponseDto;
+import com.cos.jwt.model.Authority;
 import com.cos.jwt.model.User;
 import com.cos.jwt.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +41,8 @@ public class UserService {
 
     public boolean sign(UserDto userDto){
 
+        Authority userRole = Authority.ROLE_USER;
+
         User user = User.builder()
                 .username(userDto.getUsername())
                 .password(userDto.getPassword())
@@ -52,6 +55,7 @@ public class UserService {
                 .accepted(userDto.getAccepted())
                 .my(userDto.getMy())
                 .roles("ROLE_USER")
+                .authority(userRole)
                 .build();
         User user2 = userRepository.save(user);
         System.out.println(user2);
