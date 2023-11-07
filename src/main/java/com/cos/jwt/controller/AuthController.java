@@ -47,6 +47,7 @@ public class AuthController {
 //        refreshtokenCookie.setSecure(true); https통신에서만 가능하게 하는 것
         refreshtokenCookie.setHttpOnly(true); // 자바스크립트로 쿠키 접근 못하게 막는 것
         refreshtokenCookie.setPath("/");
+        refreshtokenCookie.setDomain(".carlnathal.shop");
 
         response.addCookie(refreshtokenCookie);
 
@@ -78,6 +79,7 @@ public class AuthController {
 
             cookie.setHttpOnly(true);
             cookie.setPath("/");
+            cookie.setDomain(".carlnathal.shop");
 
             response.addCookie(cookie);
 
@@ -94,6 +96,7 @@ public class AuthController {
 
             cookie.setHttpOnly(true);
             cookie.setPath("/");
+            cookie.setDomain(".carlnathal.shop");
 
             response.addCookie(cookie);
 
@@ -125,6 +128,7 @@ public class AuthController {
 
             cookie.setHttpOnly(true);
             cookie.setPath("/");
+            cookie.setDomain(".carlnathal.shop");
 
             response.addCookie(cookie);
 
@@ -141,6 +145,7 @@ public class AuthController {
 
             cookie.setHttpOnly(true);
             cookie.setPath("/");
+            cookie.setDomain(".carlnathal.shop");
 
             response.addCookie(cookie);
 
